@@ -1,0 +1,34 @@
+body {font-family: 'Cairo', sans-serif;}
+a {text-decoration: none;}
+::placeholder {color: #ccc}
+main {
+    position: relative;
+    background: #001e2c;
+    background: -webkit-linear-gradient(to top, #014768, #001e2c);
+    background: linear-gradient(to top, #014768, #001e2c);
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+main::before, main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/robot.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    z-index: -1;
+}
+main::before {transform: scaleX(-1);}
+
+.input-range {
+    display: block;
+}
+
+.disabled {cursor: not-allowed;}
